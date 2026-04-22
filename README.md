@@ -8,12 +8,11 @@ The first template added is **Acceptance - SDP and Search**. It is based directl
 
 ## Quick Test Guide
 
-1. Visit the repo: https://github.com/elmiomar/acceptance-test-templates
-2. Go to the **Issues** tab.
-3. Click **New issue**.
-4. Select **Acceptance - SDP and Search**.
-5. Fill out the required fields.
-6. Try uploading files, such as screenshots or logs, to confirm attachments work.
+1. Go to the **Issues** tab.
+2. Click **New issue**.
+3. Select **Acceptance - SDP and Search**.
+4. Fill out the required fields.
+5. Try uploading files, such as screenshots or logs, to confirm attachments work.
 
 ## Example Issue
 

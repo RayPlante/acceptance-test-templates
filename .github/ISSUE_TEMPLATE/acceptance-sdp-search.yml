@@ -1,0 +1,138 @@
+name: "Acceptance - SDP and Search"
+description: "Validate Science Data Portal (SDP) and Search Results on testdata.nist.gov"
+title: "[Acceptance][SDP/Search] "
+labels:
+  - acceptance-testing
+  - sdp
+  - search
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this issue to validate Science Data Portal (SDP) and Search Results functionality on **testdata.nist.gov**.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: testdata.nist.gov
+    validations:
+      required: true
+
+  - type: input
+    id: release_version
+    attributes:
+      label: Release version
+      placeholder: e.g. 1.2.3rc1
+    validations:
+      required: true
+
+  - type: input
+    id: tester
+    attributes:
+      label: Tester
+      placeholder: Your name
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_data
+    attributes:
+      label: Test Data / Inputs Used
+      description: Dataset IDs, URLs, queries, filters used during testing
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: Chrome 123, Firefox, Safari
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / Screen Size
+      placeholder: Desktop, iPhone 13, 1440p, etc.
+
+  - type: input
+    id: related_pr
+    attributes:
+      label: Related PR / Feature
+      placeholder: Link to PR or feature being tested
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity (if issues found)
+      options:
+        - Critical (blocks release)
+        - High
+        - Medium
+        - Low
+
+  - type: markdown
+    attributes:
+      value: "## Science Data Portal (SDP)"
+
+  - type: checkboxes
+    id: sdp_checks
+    attributes:
+      label: SDP Checklist
+      options:
+        - label: Recent publications are displaying (indicating successful access to the RMM)
+        - label: Can access curated collection pages from SDP
+        - label: Topic area searches complete
+        - label: Default no-text search from SDP home page completes
+        - label: Can complete free text search from SDP home page, suggestions pop up properly
+        - label: API page has working link to RMM API
+        - label: Page size responds well to resizing, phone display size
+        - label: CTS logo displays
+        - label: Ensure Release version badge is up to date
+
+  - type: markdown
+    attributes:
+      value: "## Search Results"
+
+  - type: checkboxes
+    id: search_checks
+    attributes:
+      label: Search Results Checklist
+      options:
+        - label: suggestion completion is working, and displays properly
+        - label: Filters (particularly research areas) display properly (and in a timely manner)
+        - label: Suggestion completion on Author and Keyword filters work and display properly
+        - label: Research topics include numbers of hits
+        - label: Clicking on topics successfully down-select results
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce (if failure)
+      description: Step-by-step reproduction
+
+  - type: textarea
+    id: failures
+    attributes:
+      label: Failures / Defects Found
+      description: Describe any failures and include steps to reproduce.
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshots, logs, links, etc.
+
+  - type: markdown
+    attributes:
+      value: |
+        You can drag & drop screenshots, logs, or files anywhere in this issue.
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: Overall Result
+      options:
+        - ✅ Pass
+        - ⚠️ Pass with follow-ups
+        - ❌ Fail
+    validations:
+      required: true

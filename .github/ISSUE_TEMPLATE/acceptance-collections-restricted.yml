@@ -5,6 +5,7 @@ labels:
   - acceptance-testing
   - collections
   - restricted-access
+
 body:
   - type: markdown
     attributes:
@@ -23,6 +24,8 @@ body:
     id: tester
     attributes:
       label: Tester
+      placeholder: Your name
+    validations:
       required: true
 
   - type: markdown
@@ -75,8 +78,8 @@ body:
     attributes:
       label: Overall Result
       options:
-        - Pass
-        - Pass with follow-ups
-        - Fail
+        - ✅ Pass
+        - ⚠️ Pass with follow-ups
+        - ❌ Fail
     validations:
       required: true

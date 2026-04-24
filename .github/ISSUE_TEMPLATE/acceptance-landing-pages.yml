@@ -1,0 +1,99 @@
+name: "Acceptance - Landing Page Service, Metrics, Data Cart"
+description: "Validate LPS, Metrics, and Data Cart on testdata.nist.gov"
+title: "[Acceptance][LPS/Metrics/DataCart] "
+labels:
+  - acceptance-testing
+  - lps
+  - metrics
+  - data-cart
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Validate Landing Page Service (LPS), Metrics, and Data Cart functionality.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: testdata.nist.gov
+    validations:
+      required: true
+
+  - type: input
+    id: release_version
+    attributes:
+      label: Release version
+      placeholder: e.g. 2026.04.22
+    validations:
+      required: true
+
+  - type: input
+    id: tester
+    attributes:
+      label: Tester
+      placeholder: Your name
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Landing Page Service (LPS)"
+
+  - type: checkboxes
+    id: lps_checks
+    attributes:
+      label: LPS Checklist
+      options:
+        - label: Overall display features (spacing, colors, content) is correct
+        - label: Server-side log (/data/oar/logs/pdr/lps.log) shows no errors when delivering a landing page.
+        - label: File listing appears, folders can be opened, entries are clickable, and download icons appear
+        - label: Single-file download works (indicating that the distribution service is working) [add example rec. id. suitable for testdata]
+        - label: Ensure Access URL display and link properly
+        - label: Choose a LP with a custom Home Page; ensure Visit Home Page button appears and works [add example rec. id.]
+        - label: Research Topics display properly (including collection-specific topics)
+        - label: metadata display can be opened
+        - label: citation can be opened
+        - label: version history can be opened
+        - label: Make sure bulk download page 
+        - label: Ensure Release version badge is up to date
+
+  - type: markdown
+    attributes:
+      value: "## Metrics"
+
+  - type: checkboxes
+    id: metrics_checks
+    attributes:
+      label: Metrics Checklist
+      options:
+        - label: Active metrics summary appears on landing page
+        - label: Dataset metric page can be opened and displayed properly [add example rec id]
+
+  - type: markdown
+    attributes:
+      value: "## Data Cart"
+
+  - type: checkboxes
+    id: cart_checks
+    attributes:
+      label: Data Cart Checklist
+      options:
+        - label: Landing page Download-All works (Bundles are automatically set up and ready for download; download works) [add example rec id]
+        - label: Icons (particularly download icons) display correctly
+
+  - type: textarea
+    id: failures
+    attributes:
+      label: Failures / Defects Found
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: Overall Result
+      options:
+        - Pass
+        - Pass with follow-ups
+        - Fail
+    validations:
+      required: true

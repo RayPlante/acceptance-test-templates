@@ -10,7 +10,8 @@ body:
     attributes:
       value: >-
         This issue type is for describing a bug that was discovered during release acceptance
-        testing and which needs to be addressed before the release can be completed.
+        testing and which needs to be addressed before the release can be completed.  It is usually
+        created as a sub-issue of an Release Acceptance checklist issue. 
 
 
         To complete this report:

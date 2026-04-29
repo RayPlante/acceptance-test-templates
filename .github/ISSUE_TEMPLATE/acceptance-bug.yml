@@ -1,0 +1,49 @@
+name: "Acceptance Bug"
+description: "Report for bugs discovered during acceptance testing"
+title: "Acceptance Bug: "
+labels:
+  - acceptance-testing
+  - sdp
+  - search
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        This issue type is for describing a bug that was discovered during release acceptance
+        testing and which needs to be addressed before the release can be completed.
+
+
+        To complete this report:
+        1. A brief description to the title above
+        2. Complete the form below
+        3. Assign to the appropriate developer
+
+  - type: input
+    attributes:
+      label: Target Release Version
+      id: version
+      placeholder: 1.15.5
+
+  - type: input
+    attributes:
+      label: System, component, or repository name requiring fix
+      id: name
+      placeholder: e.g. SDP, LPS, oar-pdr-py
+
+  - type: markdown
+    attributes:
+      value: >-
+        Explain the problem.  Try to include the expected behavior and how the interface failed to
+        meet that behavior.
+        
+  - type: textarea
+    attributes:
+      label: Description
+      id: description
+      required: true
+
+  - type: markdown
+    attributes:
+      value: >-
+        Don't forget to assign this issue to the appropriate developer.
+        

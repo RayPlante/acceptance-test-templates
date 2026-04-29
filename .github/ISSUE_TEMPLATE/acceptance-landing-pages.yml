@@ -9,6 +9,15 @@ body:
   - type: markdown
     attributes:
       value: >-
+        Be sure to replace [Version] in the title above.  If necessary, update the testing
+        platform, and provide any special instructions.  Assign to a developer for
+        completion. 
+
+  - type: textarea
+    id: instructions
+    attributes:
+      label: Instructions
+      value: >-
         Please test the release candidate running on the platform noted below and confirm
         the assertions listed below; check the box by each assertion when you have
         confirmed compliance.  If you encounter problems, describe them in comments to

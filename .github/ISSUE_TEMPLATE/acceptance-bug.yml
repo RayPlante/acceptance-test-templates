@@ -20,15 +20,15 @@ body:
         3. Assign to the appropriate developer
 
   - type: input
+    id: version
     attributes:
       label: Target Release Version
-      id: version
       placeholder: 1.15.5
 
   - type: input
+    id: name
     attributes:
       label: System, component, or repository name requiring fix
-      id: name
       placeholder: e.g. SDP, LPS, oar-pdr-py
 
   - type: markdown
@@ -38,9 +38,9 @@ body:
         meet that behavior.
         
   - type: textarea
+    id: description
     attributes:
       label: Description
-      id: description
       required: true
 
   - type: markdown

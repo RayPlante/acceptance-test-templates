@@ -58,12 +58,29 @@ body:
         - label: Landing page Download-All works (Bundles are automatically set up and ready for download; download works) [add example rec id]
         - label: Icons (particularly download icons) display correctly
 
-  - type: input
+  - type: checkboxes
     id: browser
     attributes:
-      label: Browser(s) tested on
-      placeholder: Chrome 123, Firefox, Safari
-
+      label: Browser(s) tested on (check all that apply; all not required)
+      options:
+        - label: Chrome
+        - label: Firefox
+        - label: Safari
+        - label: Edge
+        - label: Other
+          
+  - type: checkboxes
+    id: platform
+    attributes:
+      label: OS platform(s) tested on (check all that apply; all not required)
+      options:
+        - label: Mac
+        - label: Linux
+        - label: Windows
+        - label: Android
+        - label: iOS (IPhone/IPad)
+        - label: Other
+          
   - type: checkboxes
     id: completion
     attributes:

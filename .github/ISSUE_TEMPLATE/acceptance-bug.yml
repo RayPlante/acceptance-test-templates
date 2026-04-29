@@ -41,7 +41,6 @@ body:
     id: description
     attributes:
       label: Description
-      required: true
 
   - type: markdown
     attributes:

@@ -1,6 +1,6 @@
 name: "Acceptance - SDP and Search"
 description: "Validate Science Data Portal (SDP) and Search Results on testdata.nist.gov"
-title: "Release Acceptance [Version]: SDP/Search"
+title: "Release [Version] Acceptance Testing: SDP/Search"
 labels:
   - acceptance-testing
   - sdp
@@ -17,7 +17,7 @@ body:
     id: instructions
     attributes:
       label: Instructions
-      value: |
+      value: >-
         Please test the release candidate running on the platform noted below and confirm
         the assertions listed below; check the box by each assertion when you have
         confirmed compliance.  If you encounter problems, describe them in comments to

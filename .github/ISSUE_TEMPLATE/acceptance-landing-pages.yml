@@ -14,7 +14,10 @@ body:
         confirmed compliance.  If you encounter problems, describe them in comments to
         this issue (and @-tag relevent devlopers), and consider creating a sub-issue.
         When all assertions are confirmed and no problems remain open, click the "Testing
-        Complete" box and close this issue. 
+        Complete" box and close this issue.
+
+        Note checking multiple broswers or OS platforms is _not_ required, unless explicitly
+        requested.  
 
   - type: input
     id: platform

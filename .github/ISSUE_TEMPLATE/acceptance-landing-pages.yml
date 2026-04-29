@@ -1,38 +1,26 @@
-name: "Acceptance - Landing Page Service, Metrics, Data Cart"
-description: "Validate LPS, Metrics, and Data Cart on testdata.nist.gov"
-title: "[Acceptance][LPS/Metrics/DataCart] "
+name: "Acceptance - Landing Page Service and Data Cart"
+description: "Validate LPS and Data Cart on testdata.nist.gov"
+title: "Release [Version] Acceptance Testing: Landing Pages and Data Cart"
 labels:
   - acceptance-testing
   - lps
-  - metrics
   - data-cart
 body:
   - type: markdown
     attributes:
-      value: |
-        Validate Landing Page Service (LPS), Metrics, and Data Cart functionality.
+      value: >-
+        Please test the release candidate running on the platform noted below and confirm
+        the assertions listed below; check the box by each assertion when you have
+        confirmed compliance.  If you encounter problems, describe them in comments to
+        this issue (and @-tag relevent devlopers), and consider creating a sub-issue.
+        When all assertions are confirmed and no problems remain open, click the "Testing
+        Complete" box and close this issue. 
 
   - type: input
-    id: environment
+    id: platform
     attributes:
-      label: Environment
-      placeholder: testdata.nist.gov
-    validations:
-      required: true
-
-  - type: input
-    id: release_version
-    attributes:
-      label: Release version
-      placeholder: e.g. 2026.04.22
-    validations:
-      required: true
-
-  - type: input
-    id: tester
-    attributes:
-      label: Tester
-      placeholder: Your name
+      label: Testing Platform
+      value: testdata.nist.gov
     validations:
       required: true
 
@@ -60,18 +48,6 @@ body:
 
   - type: markdown
     attributes:
-      value: "## Metrics"
-
-  - type: checkboxes
-    id: metrics_checks
-    attributes:
-      label: Metrics Checklist
-      options:
-        - label: Active metrics summary appears on landing page
-        - label: Dataset metric page can be opened and displayed properly [add example rec id]
-
-  - type: markdown
-    attributes:
       value: "## Data Cart"
 
   - type: checkboxes
@@ -82,18 +58,17 @@ body:
         - label: Landing page Download-All works (Bundles are automatically set up and ready for download; download works) [add example rec id]
         - label: Icons (particularly download icons) display correctly
 
-  - type: textarea
-    id: failures
+  - type: input
+    id: browser
     attributes:
-      label: Failures / Defects Found
+      label: Browser(s) tested on
+      placeholder: Chrome 123, Firefox, Safari
 
-  - type: dropdown
-    id: result
+  - type: checkboxes
+    id: completion
     attributes:
-      label: Overall Result
+      label: Testing Completed
       options:
-        - Pass
-        - Pass with follow-ups
-        - Fail
-    validations:
-      required: true
+        - label: all acceptance tests completed with no issues found
+
+

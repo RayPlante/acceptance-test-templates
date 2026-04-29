@@ -1,0 +1,64 @@
+name: "Acceptance - Restricted Public Access"
+description: "Validate Restricted Public Access"
+title: "Release [Version] Acceptance Testing: RPA"
+labels:
+  - acceptance-testing
+  - restricted-access
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+      value: >-
+        Be sure to replace [Version] in the title above.  If necessary, update the testing
+        platform, and provide any special instructions.  Assign to a developer for
+        completion. 
+
+  - type: textarea
+    id: instructions
+    attributes:
+      label: Instructions
+      value: >-
+        Please test the release candidate running on the platform noted below and confirm
+        the assertions listed below; check the box by each assertion when you have
+        confirmed compliance.  If you encounter problems, describe them in comments to
+        this issue (and @-tag relevent devlopers), and consider creating a sub-issue.
+        When all assertions are confirmed and no problems remain open, click the "Testing
+        Complete" box and close this issue. 
+
+  - type: input
+    id: platform
+    attributes:
+      label: Testing Platform
+      value: testdata.nist.gov
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Restricted Public Access (RPA)"
+
+  - type: checkboxes
+    id: restricted_checks
+    attributes:
+      label: Restricted Access Checklist
+      options:
+        - label: File listing includes download icons for public files and no icons for restricted files
+        - label: Landing Page includes “Download Data” button link
+        - label: Clicking “Download Data” button brings up download request form
+        - label: Request-to-Download workflow works
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser(s) tested on
+      placeholder: Chrome 123, Firefox, Safari
+
+  - type: checkboxes
+    id: completion
+    attributes:
+      label: Testing Completed
+      options:
+        - label: all acceptance tests completed with no issues found
+
+

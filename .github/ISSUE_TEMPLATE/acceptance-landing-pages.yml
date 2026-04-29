@@ -77,7 +77,7 @@ body:
         - label: Other
           
   - type: checkboxes
-    id: platform
+    id: os
     attributes:
       label: OS platform(s) tested on (check all that apply; all not required)
       options:

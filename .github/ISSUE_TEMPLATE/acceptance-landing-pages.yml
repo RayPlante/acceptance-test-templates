@@ -25,11 +25,11 @@ body:
         When all assertions are confirmed and no problems remain open, click the "Testing
         Complete" box and close this issue.
 
-        
-        Note checking multiple broswers or OS platforms is _not_ required, unless explicitly
-        requested.
 
-        
+        Note that checking multiple broswers or OS platforms is _not_ required, unless 
+        explicitly requested.
+
+
         See the [Acceptance Testing page on
         Confluence](https://nistgov.atlassian.net/wiki/spaces/OKB/pages/15959145/Acceptance+Testing)
         for more information.  

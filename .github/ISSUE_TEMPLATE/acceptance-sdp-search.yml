@@ -23,7 +23,16 @@ body:
         confirmed compliance.  If you encounter problems, describe them in comments to
         this issue (and @-tag relevent devlopers), and consider creating a sub-issue.
         When all assertions are confirmed and no problems remain open, click the "Testing
-        Complete" box and close this issue. 
+        Complete" box and close this issue.
+
+
+        Note checking multiple broswers or OS platforms is _not_ required, unless explicitly
+        requested.
+
+
+        See the [Acceptance Testing page on
+        Confluence](https://nistgov.atlassian.net/wiki/spaces/OKB/pages/15959145/Acceptance+Testing)
+        for more information.  
 
   - type: input
     id: platform
@@ -67,12 +76,29 @@ body:
         - label: Research topics include numbers of hits
         - label: Clicking on topics successfully down-select results
 
-  - type: input
+  - type: checkboxes
     id: browser
     attributes:
-      label: Browser(s) tested on
-      placeholder: Chrome 123, Firefox, Safari
-
+      label: Browser(s) tested on (check all that apply; all not required)
+      options:
+        - label: Chrome
+        - label: Firefox
+        - label: Safari
+        - label: Edge
+        - label: Other
+          
+  - type: checkboxes
+    id: os
+    attributes:
+      label: OS platform(s) tested on (check all that apply; all not required)
+      options:
+        - label: Mac
+        - label: Linux
+        - label: Windows
+        - label: Android
+        - label: iOS (IPhone/IPad)
+        - label: Other
+          
   - type: checkboxes
     id: completion
     attributes:
